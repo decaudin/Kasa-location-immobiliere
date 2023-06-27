@@ -1,0 +1,34 @@
+.error {
+    color:#FF6060;
+    margin-top: -140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+        font-size: 263px;
+        margin-bottom: 35px;
+    }
+    .oups {
+        font-size: 30px;
+        margin-bottom: 75px;
+    }
+    .goBack {
+        text-decoration: underline;
+        margin-bottom: 75px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .error {
+        margin-top: 0;
+        h1 {
+            font-size: 99px;           
+        }
+        .oups {
+            font-size: 15px;
+            
+
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.banner {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    img {
+        display: inline-block;
+        width: 90%;
+        border-radius: 25px;
+        filter: brightness(0.8);
+    }
+    h1 {
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: 500;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .banner {
+        img {
+          height: 111px;
+          width: 87%;
+        }
+        h1 {
+            font-size: 24px;
+            width: 60%;
+            left: 39%;
+            text-align: start;
+        }
+    }
+  }

@@ -1,0 +1,27 @@
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 209px;
+    margin-top: 20px;
+    padding-top: 50px;
+    p {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .footer {
+        img {
+            width: 122px;
+            height: 40px;     
+        }
+        p {
+            width: 47%;
+            text-align: center;
+        }
+    }
+}
