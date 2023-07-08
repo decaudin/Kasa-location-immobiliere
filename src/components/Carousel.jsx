@@ -4,14 +4,16 @@ import arrowRight from "../assets/arrowRight.png";
 import '../styles/Carousel.scss';
 
 const Carousel = ({ pictures }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0); // variable d'état (currentIndex) initialisé à 0 avec useState (hook), fonction setCurrentIndex pour la mettre à jour)
+
+// Fonctions navigation
 
   const goToPreviousSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
+    setCurrentIndex((currentIndex) => (currentIndex === 0 ? pictures.length - 1 : currentIndex - 1));
   };
 
   const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((currentIndex) => (currentIndex === pictures.length - 1 ? 0 : currentIndex + 1));
   };
 
   const showArrows = pictures.length > 1;  // Vérifie s'il y a plus d'une image pour afficher les flèches
@@ -19,7 +21,7 @@ const Carousel = ({ pictures }) => {
   return (
     <div className="carousel">
       <img className="carousel-image" src={pictures[currentIndex]} alt="logement" />
-      {showArrows && (
+      {showArrows && (   // vérifie que showArrows est true et dans ce cas execute le code suivant
       <div className="carousel-controls">
         <button className="carousel-control" onClick={goToPreviousSlide}>
         <img src={arrowLeft} alt="Fleche gauche" />

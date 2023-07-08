@@ -11,63 +11,204 @@
         object-fit: cover;
         margin-bottom: 15px;
     }
-    .firstInfo {
+    .firstAndSecondInfo {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color:  #FF6060;
         width: 90%;
-        .locationTitle {
-            h1 {
-                font-weight: 500;
+        .firstInfo {
+            color:  #FF6060;
+            width: 50%;
+            .locationTitle {
+                h1 {
+                    font-weight: 500;
+                }
+                p {
+                    margin-top: -15px;
+                    margin-bottom: 25px;
+                }
+                ul{
+                    display: flex;
+                    padding: 0;
+                    width: 100%;
+                    li{
+                        list-style-type: none;
+                        background-color: #FF6060;
+                        color: white;
+                        border-radius: 13px;
+                        padding: 7px 30px 7px 30px;
+                        margin-right: 10px;
+                    }
+                }
             }
         }
-        .host {
+        .secondInfo {
             display: flex;
-            width: 15%;
-            justify-content: space-between;
-            img {
-                height: 64px;
-                width: 64px;
-                border-radius: 32px;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            width: 50%;
+            margin-bottom: 50px;
+            .host {
+                display: flex;
+                width: 23%;
+                justify-content: space-between;
+                color: #FF6060;
+                img {
+                    height: 64px;
+                    width: 64px;
+                    border-radius: 32px;
+                }
             }
-        }
-    }
-    .secondInfo {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        ul{
-            display: flex;
-            padding: 0;
-            width: 60%;
-            li{
-                list-style-type: none;
-                background-color: #FF6060;
-                color: white;
-                border-radius: 13px;
-                padding: 7px 30px 7px 30px;
-                margin-right: 10px;
+            .rating {
+                width: 35%;
+                img {
+                    height: auto;
+                    width: 20%;
+                }
             }
-        }
-        img {
-            height: 36px;
-            width: 20%;
         }
     }
     .thirdInfo {
         display: flex;
         width: 90%;
         justify-content: space-between;
+        margin-top: -17px;
+        margin-bottom: -15px;
     }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1175px) {
     .lodgmentPage {
+        .firstAndSecondInfo {
+            .secondInfo {
+                .host {
+                    width: 32%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .lodgmentPage {
+        .firstAndSecondInfo {
+            .firstInfo {
+                .locationTitle {
+                    ul {
+                        li {
+                            font-size: 15px;
+                            padding: 7px 15px 7px 15px;
+                        }
+                    }
+                }  
+            }
+            .secondInfo{
+                .host {
+                    width: 36%;
+                }
+                .rating {
+                    width: 50%,
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .lodgmentPage {
+        .firstAndSecondInfo {
+            .secondInfo {
+                .host {
+                    width: 44%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .lodgmentPage {
+        .firstAndSecondInfo {
+            flex-direction: column;
+            .firstInfo {
+                width: 100%;
+                .locationTitle {
+                    ul {
+                        width: 100%;
+                        li {
+                            padding: 7px 5px 7px 5px;
+                        }
+                    }
+                }
+            }
+            .secondInfo {
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 0;
+                .host {
+                    align-items: center;
+                    width: 36%;
+                    p {
+                        width: 69%;
+                    }
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+                .rating {
+                    img {
+                    height: auto;
+                    width: 20%;
+                }
+                }
+            }
+        }
         .thirdInfo {
           display: flex;
           flex-direction: column;
         }
     }
-  }
+}
+
+@media screen and (max-width: 460px) {
+    .lodgmentPage {
+        .firstAndSecondInfo {
+            .firstInfo {
+                .locationTitle {
+                    ul {
+                        li {
+                            margin-right: 6px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .secondInfo {
+                .host {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+        .lodgmentPage {
+            .firstAndSecondInfo {
+                .firstInfo {
+                    .locationTitle {
+                        ul {
+                            li {
+                                padding: 5px 0px 5px 0px;
+                                margin-right: 3px;
+                                display: flex;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

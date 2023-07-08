@@ -49,8 +49,11 @@
         }     
   }
 
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: 600px) {
     .collapseEquipment {
       width: 100%;
+      .header {
+        margin-top: 0;
+      }
     }
   }

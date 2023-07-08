@@ -6,7 +6,7 @@ const BannerAbout = () => {
   return (
     <div className="bannerAbout">
       <picture>
-        <source media="(max-width: 599px)" srcSet={bannerAboutMobile} />
+        <source media="(max-width: 600px)" srcSet={bannerAboutMobile} />
         <img src={bannerAbout} alt="montagnes enneigées" />
       </picture>
     </div>

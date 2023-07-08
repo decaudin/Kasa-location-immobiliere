@@ -15,15 +15,17 @@ import "./styles/Footer.scss";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/Lodgement/:id" element={<Lodgement />} />
-        <Route path="/About" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="all">
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Lodgement/:id" element={<Lodgement />} />
+          <Route path="/About" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   </React.StrictMode>
 );

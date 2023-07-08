@@ -1,4 +1,6 @@
 .allCollapse {
+  margin-top: 50px;
+  margin-bottom: 50px;
   .collapse {
     margin-bottom: 30px;
     width: 100%;
@@ -23,7 +25,7 @@
               transition: transform 0.3s ease-in-out;
               cursor: pointer;
             }  
-          .open {
+          .imgOpen {
               transform: rotate(-180deg);
             }
       }
@@ -42,7 +44,7 @@
           opacity: 0;
           transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s, opacity 0.3s;
         }
-      .open {
+      .collapseOpen {
         max-height: 80px;
         visibility: visible;
         opacity: 1;
@@ -51,12 +53,29 @@
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
+  .allCollapse {
+    .collapse {
+      .collapseOpen {
+        height: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
   .allCollapse {
       .collapse {
         .header {
           width: 90%;
         }
+        .content {
+          width: 90%;
+        }
       }
   }
 }
+
+

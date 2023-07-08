@@ -47,10 +47,11 @@
       }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
   .carousel {
       img {
         height: 255px;
+        margin-top: 15px;
       }
       .carousel-controls {
         .carousel-control {

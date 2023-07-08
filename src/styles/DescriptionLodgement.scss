@@ -31,9 +31,9 @@
             border-radius: 5px;
             padding-top: 8px;
             padding-bottom: 8px;
+            padding-left: 7px;
             display: flex;
             align-items: center;
-            text-align: center;
             max-height: 0;
             visibility: hidden;
             opacity: 0;
@@ -46,8 +46,8 @@
           }     
     }
 
-    @media screen and (max-width: 599px) {
-      .collapse {
+    @media screen and (max-width: 600px) {
+      .collapseDescription {
         width: 100%;
       }
     }

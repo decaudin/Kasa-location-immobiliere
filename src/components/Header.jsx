@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import "../styles/Header.scss";
 
 const Header = () => {
-  const location = useLocation();
+  const location = useLocation();  // Hook qui nous permettra de récupérer l'Url de la page d'arrivée
 
   return (
     <div className="header">
@@ -15,7 +15,7 @@ const Header = () => {
         <ul>
           <li>
             <Link
-              to="/"
+              to="/"      // Spécifie l'url vers laquelle le lien doit rediriger
               className={`link ${location.pathname === "/" ? "active" : ""}`}
             >
               Accueil
@@ -25,8 +25,7 @@ const Header = () => {
             <Link
               to="/about"
               className={`link ${
-                location.pathname === "/about" ? "active" : ""
-              }`}
+                location.pathname === "/about" ? "active" : ""}`}
             >
               A propos
             </Link>

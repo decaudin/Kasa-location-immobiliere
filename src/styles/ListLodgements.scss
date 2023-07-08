@@ -38,13 +38,20 @@
             color: white;
             position: absolute;
             bottom: 20px;
-            width: 89%;
+            width: 90%;
             margin: 0;
             font-size: 14px;
             font-weight: 500;
             z-index: 2;
         }
     }
+}
+
+@media screen and (max-width: 1024px){
+    .lodgementsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
 }
 
 @media screen and (max-width: 600px){

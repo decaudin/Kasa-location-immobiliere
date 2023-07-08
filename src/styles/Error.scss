@@ -1,34 +1,45 @@
 .error {
     color:#FF6060;
-    margin-top: -140px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 825px;
     text-align: center;
     h1 {
         font-size: 263px;
-        margin-bottom: 35px;
+        margin-bottom: 70px;
+        margin-top: 90px;
     }
     .oups {
-        font-size: 30px;
-        margin-bottom: 75px;
+        font-size: 51px;
+        margin-bottom: 160px;
+        margin-top: 104px;
     }
     .goBack {
         text-decoration: underline;
-        margin-bottom: 75px;
+        margin-bottom: 80px;
+        cursor: pointer;
+        font-size: 26px;
     }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
     .error {
         margin-top: 0;
         h1 {
-            font-size: 99px;           
+            font-size: 184px; 
         }
         .oups {
-            font-size: 15px;
-            
+            font-size: 40px; 
+        }
+    }
+}
 
+@media screen and (max-width: 400px) {
+    .error {
+        h1 {
+            font-size: 150px; 
+        }
+        .oups {
+            font-size: 38px; 
         }
     }
 }

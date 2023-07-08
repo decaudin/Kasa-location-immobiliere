@@ -36,7 +36,7 @@ const CollapseEquipments = ({ content = [] }) => {
         style={{ maxHeight: contentMaxHeight }}
       >
         <ul>
-        {content.map((item, index) => (
+        {content.map((item, index) => (   // Fonction map pour itérer les éléments de content en un tableau de balises <li> dans la balise <ul>
   <li key={index}>{item}</li>
 ))}
         </ul>
