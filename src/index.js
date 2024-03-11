@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.scss";
-
+import "./utils/style/index.scss";
 import Home from "./pages/Home";
-import Lodgement from "./pages/Lodgement";
+import LodgementRetail from "./pages/LodgementRetail";
 import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import Error from "./pages/Error";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./styles/Header.scss";
-import "./styles/Footer.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,9 +17,9 @@ root.render(
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/Lodgement/:id" element={<Lodgement />} />
-          <Route path="/About" element={<About />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/lodgement/:id" element={<LodgementRetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </Router>

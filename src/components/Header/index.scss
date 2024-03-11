@@ -1,0 +1,55 @@
+@use '../../utils/style/colors';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 89.5%;
+
+    @media screen and (max-width: 600px) {
+        margin-bottom: 0;
+    }
+
+    .logo {
+        img {
+
+            @media screen and (max-width: 600px) {
+            width: 100%;
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+
+        @media screen and (max-width: 600px) {
+            text-transform: uppercase;
+            width: 100%;
+            margin-right: 15px;
+        }
+
+        li {
+            list-style-type: none;
+            margin-left: 50px;
+            font-size: 22px;
+
+            @media screen and (max-width: 600px) {
+                margin-left: 0;
+                margin-right: 10px;
+                font-size: 18px;
+            }
+
+            .link {
+                text-decoration: none;
+                color: colors.$main-color;
+                font-weight: 500;
+            }
+            .link.active {
+                text-decoration: underline;
+            }  
+        }
+    }
+}

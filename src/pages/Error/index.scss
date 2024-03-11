@@ -1,0 +1,45 @@
+@use '../../utils/style/colors';
+
+.error {
+    color: colors.$main-color;
+    width: 100%;
+    height: 825px;
+    text-align: center;
+    
+    @media screen and (max-width: 600px) {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 263px;
+        margin-bottom: 70px;
+        margin-top: 90px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 184px; 
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 150px; 
+        }    
+    }
+    .text {
+        font-size: 51px;
+        margin-bottom: 160px;
+        margin-top: 104px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 40px; 
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 38px; 
+        }    
+    }
+    .goBack {
+        text-decoration: underline;
+        margin-bottom: 80px;
+        cursor: pointer;
+        font-size: 26px;
+    }
+}
