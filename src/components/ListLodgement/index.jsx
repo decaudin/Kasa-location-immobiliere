@@ -1,16 +1,17 @@
 import Lodgement from "../Lodgement";
 import { Link } from "react-router-dom";
-import { useFetch } from "../../utils/hooks";
+import { useFetch } from "../../utils/hooks/Api";
 import "./index.scss";
 
 const ListLodgements = () => {
 
-  const { data, loading } = useFetch("/Data/lodgements.json");
+  const { data, loading, error } = useFetch("/Data/lodgements.json");
 
   return (
     <div className="lodgementsContainer">
       {loading && <div className="loader"></div>}
-      {!data && <div className="noData">No data available</div>}
+      {error && <div className="noData">Erreur lors du chargement des logements</div>}
+      {!data && <div className="noData">Pas de données disponibles</div>}
       {data.map((lodgement) => (
         <Link to={`/lodgement/${lodgement.id}`} key={lodgement.id}> {/* Nous permet d'aller sur la page de détail de chaque logement identifié par son id */}
           <Lodgement title={lodgement.title} cover={lodgement.cover} />

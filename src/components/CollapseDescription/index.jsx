@@ -1,10 +1,10 @@
-import { useCollapse } from '../../utils/hooks';
+import { useCollapse } from '../../utils/hooks/Collapse';
 import arrow from '../../assets/arrow.png';
 import './index.scss';
 
 const CollapseDescription = ({ content = [] }) => {
   
-  const { isOpen, contentRef, toggleCollapse } = useCollapse();
+  const { isOpen, toggleCollapse } = useCollapse();
 
   return (
     <div className={`collapseDescription ${isOpen ? "open" : ""}`}>
@@ -17,7 +17,7 @@ const CollapseDescription = ({ content = [] }) => {
           onClick={toggleCollapse}
         />
       </div>
-      <div ref={contentRef} className="content">
+      <div className="content">
         {content}
       </div>
     </div>

@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import "./index.scss";
 
 const Error = () => {
+  
   const navigate = useNavigate();
 
   // Redirige vers la page d'accueil

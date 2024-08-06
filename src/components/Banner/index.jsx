@@ -2,6 +2,7 @@ import banner from "../../assets/banner.png";
 import "./index.scss";
 
 const Banner = () => {
+  
   return (
     <div className="banner">
       <img src={banner} alt="falaise sur la mer" />

@@ -2,6 +2,7 @@ import footer from "../../assets/logo-footer.png";
 import "./index.scss";
 
 const Footer = () => {
+  
   return (
     <div className="footer">
       <img src={footer} alt="logo kasa" />

@@ -15,7 +15,7 @@
         margin-bottom: 15px;
         position: relative;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 768px) {
             height: 255px;
             margin-top: 15px;
         }
@@ -39,7 +39,7 @@
                 width: 40px;
                 height: 60px;
 
-                @media screen and (max-width: 600px) {
+                @media screen and (max-width: 768px) {
                     width: 20px;
                     height: 30px;
                 }
@@ -60,5 +60,6 @@
         left: 50%;
         transform: translateX(-50%);
         color: white;
+        font-weight: 500;
     }  
 }

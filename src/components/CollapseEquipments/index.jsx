@@ -1,10 +1,10 @@
-import { useCollapse } from '../../utils/hooks';
+import { useCollapse } from '../../utils/hooks/Collapse';
 import arrow from '../../assets/arrow.png';
 import './index.scss';
 
 const CollapseEquipments = ({ content = [] }) => { 
 
-  const { isOpen, contentRef, toggleCollapse } = useCollapse();
+  const { isOpen, toggleCollapse } = useCollapse();
 
   return (
     <div className={`collapseEquipment ${isOpen ? "open" : ""}`}>
@@ -17,7 +17,7 @@ const CollapseEquipments = ({ content = [] }) => {
           onClick={toggleCollapse}
         />
       </div>
-      <div ref={contentRef} className="content">
+      <div className="content">
         <ul>
           {content.map((item, index) => (   // Fonction map pour itérer les éléments de content en un tableau de balises <li> dans la balise <ul>
             <li key={index}>{item}</li>

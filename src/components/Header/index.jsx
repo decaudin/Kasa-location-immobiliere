@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import "./index.scss";
 
 const Header = () => {
+  
   const location = useLocation();  // Hook qui nous permettra de récupérer l'Url de la page d'arrivée
 
   return (

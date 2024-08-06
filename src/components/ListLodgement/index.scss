@@ -18,18 +18,19 @@
         grid-gap: 10px;
     }
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 768px){
         display: flex;
         flex-direction: column;
         background-color: white;
+        width: 90%;
         margin-top: 9px;
     }
 
     .loader, .noData {
+        font-weight: 700;
+        color: colors.$main-color;
         grid-column: 1 / -1; 
-        grid-row: 1 / -1;
         justify-self: center;
-        align-self: center;
     }
 
     .lodgementCard {
@@ -63,7 +64,7 @@
             width: 90%;
             margin: 0;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             z-index: 2;
         }
     }

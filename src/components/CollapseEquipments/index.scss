@@ -4,7 +4,7 @@
     margin-bottom: 30px;
     width: 48%;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         width: 100%;
     }
 
@@ -15,31 +15,23 @@
         height: 52px;
         width: 100%;
         margin: 0 auto;
-        margin-top: 30px;
-
-        @media screen and (max-width: 600px) {
-            margin-top: 0;
-        }
 
         .collapseTitle {
             color: white;
-            font-weight: 500;
+            font-weight: 600;
             margin-left: 20px;
         }
-        img {
-            margin-right: 20px;
-        }
         .arrow {
+            margin-right: 20px;
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
-        }  
+        }
         .open {
             transform: rotate(-180deg);
         }
     }
     .content {
         background-color: colors.$secondary-color;
-        color: colors.$main-color;
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -47,8 +39,10 @@
         visibility: hidden;
         opacity: 0;
         max-height: 0;
-        transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s, opacity 0.3s;
+        transition: max-height 0.3s ease-in-out, visibility 0s linear 0.1s, opacity 0.3s;
         ul {
+            padding-left: 7px;
+
             li{
                 list-style-type: none;
                 text-align: start;
@@ -59,6 +53,6 @@
         visibility: visible;
         opacity: 1;
         max-height: 205px;
-        transition: max-height 0.3s ease-in-out, visibility 0s linear, opacity 0.3s;
+        transition: max-height 0.3s ease-in-out, visibility 0s linear 0.2s, opacity 0.3s;
     }          
 }
