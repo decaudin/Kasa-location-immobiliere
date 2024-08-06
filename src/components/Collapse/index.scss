@@ -1,0 +1,49 @@
+@use '../../utils/style/colors';
+
+.collapse {
+    margin-bottom: 30px;
+    width: 48%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: colors.$main-color;
+        border-radius: 7px;
+        height: 52px;
+        width: 100%;
+        margin: 0 auto;
+
+        .collapseTitle {
+            color: white;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+        .arrow {
+            margin-right: 20px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .open {
+            transform: rotate(-180deg);
+        }
+    }
+    .content {
+        background-color: colors.$secondary-color;
+        border-radius: 5px;
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out, visibility 0s linear 0.1s, opacity 0.3s;
+    }
+    &.open .content{
+        visibility: visible;
+        opacity: 1;
+        max-height: 205px;
+        transition: max-height 0.3s ease-in-out, visibility 0s linear 0.2s, opacity 0.3s;
+    }
+}
+

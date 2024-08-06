@@ -25,8 +25,7 @@ const Header = () => {
           <li>
             <Link
               to="/about"
-              className={`link ${
-                location.pathname === "/about" ? "active" : ""}`}
+              className={`link ${location.pathname === "/about" ? "active" : ""}`}
             >
               A propos
             </Link>

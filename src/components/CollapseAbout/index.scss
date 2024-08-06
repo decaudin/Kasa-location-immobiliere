@@ -12,65 +12,36 @@
     }
     
     .collapse {
-        margin-bottom: 30px;
         width: 100%;
         .header {
-            display: flex;
-            justify-content: space-between;
-            background-color: colors.$main-color;
-            border-radius: 7px; 
-            height: 52px;
-            width: 75%;
-            margin: 0 auto;
-            margin-top: 30px;
+            width: 75%;            
 
             @media screen and (max-width: 768px) {
                 width: 90%;
-            }
-
-            .collapseTitle {
-                color: white;
-                font-weight: 500;
-                margin-left: 20px;
-            }
-            img {
-                margin-right: 20px;
-            }
-            .arrow {
-                transition: transform 0.3s ease-in-out;
-                cursor: pointer;
-            }  
-            .imgOpen {
-                transform: rotate(-180deg);
             }
         }
         .content {
           height: 80px;
           width: 75%;
-          background-color: colors.$secondary-color;
-          border-radius: 5px;
           margin: 0 auto;
           display: flex;
-          align-items: center;
-          max-height: 0;
-          visibility: hidden;
-          opacity: 0;
+          align-items: center;        
           transition: max-height 0.3s ease-in-out, visibility 0.3s linear, opacity 0.3s;
 
           @media screen and (max-width: 768px) {
               width: 90%;
+              transition: max-height 0.3s ease-in-out, visibility 0.3s linear, opacity 0.04s;
           }
         }
-        .collapseOpen {
-          visibility: visible;
-          opacity: 1;
-          max-height: 230px;
-          transition: max-height 0.3s ease-in-out, visibility 0.3s linear 0.1s, opacity 0.3s;
+        &.open .content{
+            max-height: 240px;
+            transition: max-height 0.3s ease-in-out, visibility 0.3s linear 0.1s, opacity 0.3s;
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 768px) {
               height: auto;
               padding-top: 7px;
               padding-bottom: 7px;
+              transition: max-height 0.3s ease-in-out, visibility 0.3s linear 0.1s, opacity 1s;
           }
         }     
     }
