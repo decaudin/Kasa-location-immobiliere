@@ -1,12 +1,12 @@
 import Collapse from '../Collapse';
 import './index.scss';
 
-const CollapseEquipments = ({ content = [] }) => {
+const CollapseEquipments = ({ equipments = [] }) => {
 
   return (
     <Collapse title="Équipements" className ="collapseEquipments">
       <ul>
-        {content.map((item, index) => (
+        {equipments.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>

@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 export const useFetch = (url) => {
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
 
     if (!url) return 
-    setLoading(true);
+    setIsLoading(true);
 
     const fetchData = async () => {
 
@@ -24,15 +24,15 @@ export const useFetch = (url) => {
             setData(data);
         }   catch (error) {
                 console.error("Erreur lors du chargement des logements :", error);
-                setError(true);
+                setIsError(true);
         }   finally {
-                setLoading(false);
+                setIsLoading(false);
         }
     };
     fetchData();
   }, [url]);
 
-  return { data, loading, error }
+  return { data, isLoading, isError }
 };
 
 

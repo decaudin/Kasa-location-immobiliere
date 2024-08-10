@@ -5,12 +5,12 @@ import "./index.scss";
 
 const ListLodgements = () => {
 
-  const { data, loading, error } = useFetch("/Data/lodgements.json");
+  const { data, isLoading, isError } = useFetch("/Data/lodgements.json");
 
   return (
     <div className="lodgementsContainer">
-      {loading && <div className="loader"></div>}
-      {error && <div className="noData">Erreur lors du chargement des logements</div>}
+      {isLoading && <div className="loader"></div>}
+      {isError && <div className="noData">Erreur lors du chargement des logements</div>}
       {!data && <div className="noData">Pas de données disponibles</div>}
       {data.map((lodgement) => (
         <Link to={`/lodgement/${lodgement.id}`} key={lodgement.id}> {/* Nous permet d'aller sur la page de détail de chaque logement identifié par son id */}

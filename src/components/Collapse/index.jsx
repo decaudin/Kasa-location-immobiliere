@@ -8,12 +8,13 @@ const Collapse = ({ title, children, className }) => {
 
   return (
     <div className={`collapse ${isOpen ? "open" : ""} ${className}`}>
-      <div className="header" onClick={toggleCollapse}>
+      <div className="header">
         <h2 className="collapseTitle">{title}</h2>
         <img
           className={`arrow ${isOpen ? "open" : ""}`}
           src={arrow}
           alt="Flèche"
+          onClick={toggleCollapse}
         />
       </div>
       <div className="content">

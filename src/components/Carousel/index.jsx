@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import arrowLeft from "../../assets/arrowLeft.png";
 import arrowRight from "../../assets/arrowRight.png";
 import './index.scss';
@@ -7,7 +7,7 @@ const Carousel = ({ pictures }) => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fonctions navigation
+  // Fonctions de navigation
 
   const goToPreviousSlide = () => {
     setCurrentIndex((currentIndex) => (currentIndex === 0 ? pictures.length - 1 : currentIndex - 1));

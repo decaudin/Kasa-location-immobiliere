@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../../utils/hooks/Api";
 import RatingStars from "../../components/RatingStars";
@@ -12,24 +12,24 @@ const LodgementRetail = () => {
 
   const { id } = useParams();
   const navigate = useNavigate();
-  const { data, loading, error } = useFetch("/Data/lodgements.json");
+  const { data, isLoading, isError } = useFetch("/Data/lodgements.json");
 
   const lodgementData = data ? data.find(lodgement => lodgement.id === id) : null;
 
   useEffect(() => {
 
-    if (!loading && error) {
+    if (!isLoading && isError) {
       return;
     }
-    if (!loading && !lodgementData) {
+    if (!isLoading && !lodgementData) {
       navigate("/Error");
     }
-  }, [loading, lodgementData, error, navigate]);
+  }, [isLoading, lodgementData, isError, navigate]);
 
   return (
     <div className="lodgmentPage">
-      {loading && <div className="loader"></div>}
-      {error && <div className="noData">Erreur lors du chargement des informations du logement</div>}
+      {isLoading && <div className="loader"></div>}
+      {isError && <div className="noData">Erreur lors du chargement des informations du logement</div>}
       {lodgementData && (
         <>
           <Carousel pictures={lodgementData.pictures} />
@@ -54,8 +54,8 @@ const LodgementRetail = () => {
             </div>
           </div>
           <div className="thirdInfo">
-              <CollapseDescription content={lodgementData.description} />
-              <CollapseEquipments content={lodgementData.equipments} />
+              <CollapseDescription description={lodgementData.description} />
+              <CollapseEquipments equipments={lodgementData.equipments} />
           </div>
         </>
       )}

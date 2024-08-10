@@ -9,7 +9,10 @@ const Error = () => {
 
   const handleGoBack = () => {
     navigate('/');
-  };
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  }
   
   return (
     <div className="error">

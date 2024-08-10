@@ -1,11 +1,11 @@
 import Collapse from '../Collapse';
 import './index.scss';
 
-const CollapseDescription = ({ content = [] }) => {
+const CollapseDescription = ({ description = [] }) => {
 
   return (
     <Collapse title="Description" className="collapseDescription">
-      <div>{content}</div>
+      <div>{description}</div>
     </Collapse>
   );
 };

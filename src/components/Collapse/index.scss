@@ -42,7 +42,7 @@
     &.open .content{
         visibility: visible;
         opacity: 1;
-        max-height: 205px;
+        max-height: 230px;
         transition: max-height 0.3s ease-in-out, visibility 0s linear 0.2s, opacity 0.3s;
     }
 }

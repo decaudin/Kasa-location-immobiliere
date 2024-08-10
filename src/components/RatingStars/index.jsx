@@ -1,4 +1,3 @@
-import React from "react";
 import redstar from "../../assets/redstar.png";
 import graystar from "../../assets/graystar.png";
 
